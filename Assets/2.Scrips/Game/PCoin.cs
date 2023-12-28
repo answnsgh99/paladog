@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
-public class Instantiate : MonoBehaviour
+public class PCoin : MonoBehaviour
 {
-    [SerializeField] private GameObject ob;
-    [SerializeField] private Transform parent;
+    [SerializeField] private TMP_Text coinTxt;
+    [SerializeField] private Slider sd;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,11 +17,7 @@ public class Instantiate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    public void Instantiatechar()
-    {
-        Instantiate(ob, parent);
+        sd.value += Time.deltaTime * 1f;
+        coinTxt.text = sd.value.ToString("0");
     }
 }

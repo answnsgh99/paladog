@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Instantiate : MonoBehaviour
+public class EnemyManager : MonoBehaviour
 {
-    [SerializeField] private GameObject ob;
+    [SerializeField] private GameObject enemy;
     [SerializeField] private Transform parent;
     // Start is called before the first frame update
     void Start()
@@ -18,8 +18,8 @@ public class Instantiate : MonoBehaviour
         
     }
 
-    public void Instantiatechar()
+    void CreateEnemy()
     {
-        Instantiate(ob, parent);
+        Instantiate(enemy, parent);
     }
 }

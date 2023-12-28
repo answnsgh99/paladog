@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 271628867694285831}
   - component: {fileID: 2640749857724431772}
   m_Layer: 0
-  m_Name: BS Idle
+  m_Name: BA Idle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3154150011874791226, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
+  m_Sprite: {fileID: 4749904528282777558, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,9 +102,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   attacksprites:
-  - {fileID: -3387478527075654864, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
-  - {fileID: -3154150011874791226, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
-  en: {fileID: 936330609179898644, guid: 8bc5dd6f3a3d25f409baecd148289560, type: 3}
+  - {fileID: 9018646923762226945, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
+  - {fileID: 4749904528282777558, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
 --- !u!114 &-8982493342302058267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,7 +129,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.2, y: 0.5}
+  m_Offset: {x: -0.26, y: 0.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -141,7 +140,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.09, y: 1}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!50 &2640749857724431772
 Rigidbody2D:
