@@ -6,7 +6,7 @@ public class PlayerChar : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private List<Sprite> attacksprites;
-    [SerializeField] private GameObject en;
+    //[SerializeField] private GameObject en;
     
 
     private bool isMove = true;
@@ -28,21 +28,18 @@ public class PlayerChar : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        isMove = false;
-        GetComponent<SpriteAnimation>().SetSprite(attacksprites, 0.5f);
-    }
+    
 
-    public void Distance()
+    public void Attack()
     {
-        float distance = Vector2.Distance(transform.position, en.transform.position);
-        if (distance <= 2)
+        /*if (isMove == false)
+            return;
+        if (transform.position.x - en.transform.position.x > -0.7f) 
         {
             isMove = false;
-            GetComponent<SpriteAnimation>().SetSprite(attacksprites, 0.5f);
-        }
-        
+            GetComponent<SpriteAnimation>().SetSprite(attacksprites, 0.5f); 
+        }*/
+
     }
 
     public void Move()

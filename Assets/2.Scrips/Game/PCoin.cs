@@ -6,8 +6,11 @@ using TMPro;
 
 public class PCoin : MonoBehaviour
 {
-    [SerializeField] private TMP_Text coinTxt;
-    [SerializeField] private Slider sd;
+    [SerializeField] public TMP_Text coinTxt;
+    [SerializeField] public Slider sd;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,4 +23,5 @@ public class PCoin : MonoBehaviour
         sd.value += Time.deltaTime * 1f;
         coinTxt.text = sd.value.ToString("0");
     }
+    
 }

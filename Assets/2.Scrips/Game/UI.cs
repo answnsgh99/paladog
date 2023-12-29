@@ -36,6 +36,8 @@ public class UI : MonoBehaviour
         }
     }
 
+    
+
     private void Start()
     {
         rscore = 20;
