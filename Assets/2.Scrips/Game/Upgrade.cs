@@ -9,7 +9,8 @@ public class Upgrade : MonoBehaviour
     
     [SerializeField] private Image[] images;
     [SerializeField] private Sprite[] upSprites;
-    private bool isbool;
+    [SerializeField] private Slider pcoin;
+    private bool isbool = true;
     
     // Start is called before the first frame update
     void Start()
@@ -25,12 +26,13 @@ public class Upgrade : MonoBehaviour
 
     public void CharacterUp()
     {
-        if (isbool == false)
+        if (isbool == false || pcoin.value < 15)
             return;
         for (int i = 0; i < images.Length; i++)
         {
             images[i].sprite = upSprites[i];
         }
         isbool = false;
+        pcoin.value -= 15;
     }
 }

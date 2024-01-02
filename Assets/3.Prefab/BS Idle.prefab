@@ -10,13 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 936330609179898633}
   - component: {fileID: 936330609179898646}
-  - component: {fileID: 936330609179898647}
+  - component: {fileID: -4910141977924096042}
   - component: {fileID: -8982493342302058267}
   - component: {fileID: 271628867694285831}
   - component: {fileID: 2640749857724431772}
   m_Layer: 0
   m_Name: BS Idle
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &936330609179898647
+--- !u!114 &-4910141977924096042
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,14 +97,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 936330609179898644}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc33effa89a40ad42838a3674c826095, type: 3}
+  m_Script: {fileID: 11500000, guid: 61ad600ca28493b4583f22442bed7494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  attacksprites:
-  - {fileID: -3387478527075654864, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
-  - {fileID: -3154150011874791226, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
-  en: {fileID: 936330609179898644, guid: 8bc5dd6f3a3d25f409baecd148289560, type: 3}
+  normalSprites: []
+  attackSprites: []
+  hitSprites: []
+  deadSprites: []
 --- !u!114 &-8982493342302058267
 MonoBehaviour:
   m_ObjectHideFlags: 0

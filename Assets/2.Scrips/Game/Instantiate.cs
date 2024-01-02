@@ -7,6 +7,7 @@ public class Instantiate : MonoBehaviour
 {
     [SerializeField] private GameObject ob;
     [SerializeField] private Transform parent;
+    [SerializeField] private Slider pcoin;
     
 
     // Start is called before the first frame update
@@ -21,15 +22,14 @@ public class Instantiate : MonoBehaviour
         
     }
 
-    public void Instantiatechar()
+    public void Instantiatechar(int cost)
     {
         
-        Slider pcoin = GetComponent<PCoin>().sd;
-        if (pcoin.value < 3)
+        if (pcoin.value < cost)
             return;
 
         Instantiate(ob, parent);
-        pcoin.value -= 3;
+        pcoin.value -= cost;
         
 
     }

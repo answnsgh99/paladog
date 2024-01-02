@@ -9,13 +9,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 936330609179898633}
+  - component: {fileID: -2509814681136436995}
   - component: {fileID: 936330609179898646}
   - component: {fileID: -8982493342302058267}
   - component: {fileID: 271628867694285831}
   - component: {fileID: 2640749857724431772}
   m_Layer: 0
   m_Name: RA Idle
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,14 +28,35 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936330609179898644}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-2509814681136436995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936330609179898644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5f9197faf8037458c12aa13de013d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalSprites:
+  - {fileID: 7110494968479972978, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
+  attackSprites:
+  - {fileID: 5026972546934958715, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
+  - {fileID: 7110494968479972978, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
+  hitSprites:
+  - {fileID: -6978555727864421618, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
+  deadSprites:
+  - {fileID: 842016502522805355, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
 --- !u!212 &936330609179898646
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -78,7 +100,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 7110494968479972978, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1.5, y: 1}
@@ -112,7 +134,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.26, y: 0.5}
+  m_Offset: {x: 0.25, y: 0.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}

@@ -1309,7 +1309,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10
+  m_text: 15
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2451,11 +2451,11 @@ MonoBehaviour:
       - m_Target: {fileID: 730138198}
         m_TargetAssemblyTypeName: Instantiate, Assembly-CSharp
         m_MethodName: Instantiatechar
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2512,6 +2512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ob: {fileID: 936330609179898644, guid: 9b1e836a852131040ad0d604319f36a1, type: 3}
   parent: {fileID: 1417686446}
+  pcoin: {fileID: 260222635}
 --- !u!1 &776788943
 GameObject:
   m_ObjectHideFlags: 0
@@ -2656,8 +2657,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 821836245}
+  - component: {fileID: 821836246}
   m_Layer: 0
-  m_Name: Rin
+  m_Name: '[EnemyManager]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2678,6 +2680,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &821836246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821836244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 553ccad66404729408b259ea157ed2d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pc: {fileID: 0}
+  enemies:
+  - {fileID: -2782057469512625607, guid: 8bc5dd6f3a3d25f409baecd148289560, type: 3}
+  - {fileID: -2509814681136436995, guid: a96655ff16b77d14397cb0f2a2f67d6b, type: 3}
+  - {fileID: 6327036042808680140, guid: d670f91062827ba4a8369c0485c29bba, type: 3}
+  parent: {fileID: 821836244}
+  spawnDelay: 1
 --- !u!1 &858273606
 GameObject:
   m_ObjectHideFlags: 0
@@ -3406,11 +3427,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1078464322}
         m_TargetAssemblyTypeName: Instantiate, Assembly-CSharp
         m_MethodName: Instantiatechar
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3467,6 +3488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ob: {fileID: 936330609179898644, guid: 8e3ec9904310e894e897203b014ef508, type: 3}
   parent: {fileID: 1417686446}
+  pcoin: {fileID: 260222635}
 --- !u!1 &1093772265
 GameObject:
   m_ObjectHideFlags: 0
@@ -3972,11 +3994,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1394875892}
         m_TargetAssemblyTypeName: Instantiate, Assembly-CSharp
         m_MethodName: Instantiatechar
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4033,6 +4055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ob: {fileID: 936330609179898644, guid: 04299731b37ab214489086619eb580cf, type: 3}
   parent: {fileID: 1417686446}
+  pcoin: {fileID: 260222635}
 --- !u!1 &1417686445
 GameObject:
   m_ObjectHideFlags: 0
@@ -5500,6 +5523,7 @@ MonoBehaviour:
   - {fileID: 4545135470104253956, guid: 3765a367fb48f9040bca18add088d6d3, type: 3}
   - {fileID: -4535586968756965052, guid: 3765a367fb48f9040bca18add088d6d3, type: 3}
   - {fileID: -5878569456898858483, guid: 3765a367fb48f9040bca18add088d6d3, type: 3}
+  pcoin: {fileID: 260222635}
 --- !u!1 &1932521193
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,22 +4,31 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    [SerializeField] private GameObject enemy;
-    [SerializeField] private Transform parent;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private PlayerChar pc;
+    [SerializeField] private Enemy[] enemies;
+    [SerializeField] private GameObject parent;
+    [SerializeField] private float spawnDelay;
 
-    // Update is called once per frame
+    private float spawnTimer = float.MaxValue;
+
+
     void Update()
     {
         
+        spawnTimer += Time.deltaTime;
+        if (spawnTimer >= spawnDelay)
+        {
+            spawnTimer = 0;
+            int sprand = Random.Range(3, 7);
+            spawnDelay = sprand;
+
+            int rand = Random.Range(0, 100);
+            int index = (rand < 80) ? 0 : (rand < 95) ? 1 : 2; 
+            Instantiate(enemies[index], parent.transform.position, Quaternion.identity);
+
+        }   
     }
 
-    void CreateEnemy()
-    {
-        Instantiate(enemy, parent);
-    }
+    
+    
 }
