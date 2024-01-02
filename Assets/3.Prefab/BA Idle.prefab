@@ -100,10 +100,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7580c0a615c7e344aeee29b360abfd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalSprites: []
-  attackSprites: []
-  hitSprites: []
-  deadSprites: []
+  normalSprites:
+  - {fileID: 4749904528282777558, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
+  attackSprites:
+  - {fileID: 9018646923762226945, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
+  - {fileID: 4749904528282777558, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
+  hitSprites:
+  - {fileID: 8777974672713614842, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
+  - {fileID: 4749904528282777558, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
+  deadSprites:
+  - {fileID: -1539689639676168921, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
 --- !u!114 &-8982493342302058267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,7 +132,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.26, y: 0.5}

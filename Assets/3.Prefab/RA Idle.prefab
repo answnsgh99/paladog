@@ -55,6 +55,7 @@ MonoBehaviour:
   - {fileID: 7110494968479972978, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
   hitSprites:
   - {fileID: -6978555727864421618, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
+  - {fileID: 2055389008599032140, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
   deadSprites:
   - {fileID: 842016502522805355, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
 --- !u!212 &936330609179898646
@@ -131,7 +132,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.25, y: 0.5}

@@ -9,14 +9,15 @@ public class PlayerChar : MonoBehaviour
     [SerializeField] private List<Sprite> hitSprites;
     [SerializeField] private List<Sprite> deadSprites;
 
-    private SpriteAnimation sa;
     private Enemy e;
+    private SpriteAnimation sa;
 
     protected float speed;
     protected float damage;
     protected int hp { get; set; }
 
     private bool isMove = true;
+    private bool isAttack = false;
 
     protected virtual void initialize()
     {
@@ -33,28 +34,35 @@ public class PlayerChar : MonoBehaviour
     {
         transform.Translate(Vector2.right * Time.deltaTime * speed);
     }
-
-    void Stop(Enemy e)
+    void Attack()
     {
-
-        if (transform.position.x - e.transform.position.x < 0.7f)
-        {
-            isMove = false;
-        }
+        
     }
 
-   
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            isMove = false;
-            sa.SetSprite(hitSprites, 0.2f);
-            if (hp <= 0)
-            {
-                Destroy(gameObject);
-            }
-        }
+        isMove = false;
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        
+        if(collision.gameObject.tag == "Enemy")
+        {
+            isAttack = true;
+            sa.SetSprite(attackSprites, 0.5f);
+
+            /*GameObject target = GameObject.Find(collision.gameObject.name);
+            target.GetComponent<Enemy>().*/
+        }
+        
+
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        
+        isAttack = false;
+        isMove = true;
+        sa.SetSprite(normalSprites, 0.2f);
+    }
+
 }
